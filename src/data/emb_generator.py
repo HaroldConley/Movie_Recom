@@ -1,4 +1,4 @@
-# Código para generar los embeddings basados en los plots de las películas.
+# Code to generate embeddings based on movie plots.
 
 import pandas as pd
 from langchain.document_loaders import DataFrameLoader
@@ -6,24 +6,24 @@ from langchain.vectorstores import FAISS
 from langchain.embeddings.sentence_transformer import SentenceTransformerEmbeddings
 
 
-# Importando DB lista para trabajar
+# Importing the database ready to work.
 movies = pd.read_csv('../../data/processed/movies_clean.csv')
 movies.drop('Unnamed: 0', axis=1, inplace=True)
 
 
-# Creando el 'documento' con metadata
+# Creating the 'document' with metadata.
 df_loader = DataFrameLoader(movies, page_content_column='plot_sin_nombres')
 df_document = df_loader.load()
 
-# Definiendo el modelo a usar para generar los embeddings
+# Defining the model to use for generating embeddings.
 embedding_function = SentenceTransformerEmbeddings(model_name="sentence-t5-xl")
 print('Transformer descargado.')
 
-# Creando la base de datos vectorial
+# Creating the vectorial database.
 db = FAISS.from_documents(df_document, embedding_function)
 print('DB vectorial creada.')
 
-# Guardando la base de datos
+# Saving the database.
 db.save_local('../../data/processed/plot_embeddings')
 
 
