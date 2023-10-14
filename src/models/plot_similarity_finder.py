@@ -9,7 +9,7 @@ from langchain.embeddings.sentence_transformer import SentenceTransformerEmbeddi
 embedding_function = SentenceTransformerEmbeddings(model_name="sentence-t5-xl")
 
 # Loading vectorstore
-db = FAISS.load_local('data/processed/plot_embeddings', embedding_function)
+db = FAISS.load_local('../streamlit/plot_embeddings', embedding_function)
 
 
 # Find the most similar plots to the user plot/input
@@ -47,5 +47,3 @@ def plot_simil(user_plot, num_recom=5):
         recom.append([year, title])
 
     return recom
-
-

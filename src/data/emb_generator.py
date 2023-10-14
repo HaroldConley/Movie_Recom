@@ -24,7 +24,7 @@ db = FAISS.from_documents(df_document, embedding_function)
 print('DB vectorial creada.')
 
 # Saving the database.
-db.save_local('../../data/processed/plot_embeddings')
+db.save_local('plot_embeddings')
 
 
 if __name__ == '__main__':
