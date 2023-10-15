@@ -13,8 +13,8 @@ user_plot = st.text_area("Write the plot here...")
 
 # Generación de la respuesta.
 # Agregue un botón "Responder" a la interfaz de usuario
-if st.button('Responder'):
-    with st.spinner('Leyendo el texto...'):
+if st.button('Search'):
+    with st.spinner('Reading plot...'):
         # Procesamiento
         result = plot_simil(user_plot)
 
