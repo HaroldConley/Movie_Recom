@@ -8,8 +8,7 @@ pandas~=2.1.1
 setuptools~=60.2.0
 
 
-langchain~=0.0.311
+langchain
 streamlit~=1.27.2
-src~=0.1.0
 
 en_core_web_trf @ https://github.com/explosion/spacy-models/releases/download/en_core_web_trf-3.7.2/en_core_web_trf-3.7.2-py3-none-any.whl
