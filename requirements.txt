@@ -5,10 +5,8 @@
 
 spacy~=3.7.1
 pandas~=2.1.1
-setuptools~=60.2.0
 
 
-sentence-transformers~=2.2.2
 langchain~=0.0.311
 streamlit~=1.27.2
 
