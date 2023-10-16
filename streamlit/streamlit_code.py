@@ -1,7 +1,7 @@
 # Code for Streamlit webapp
 
 import streamlit as st
-from src.models.plot_similarity_finder import plot_simil
+from ..src.models.plot_similarity_finder import plot_simil
 
 # WebApp title and subtitle
 st.title('Movie Recommendation.')
