@@ -1,16 +1,13 @@
 # Code for Streamlit webapp
 
 import streamlit as st
-from src.models.plot_similarity_finder import plot_simil
 
 import sys
 import os
-
-# Obtén la ruta al directorio raíz de tu proyecto
 root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-# Agrega el directorio raíz al PYTHONPATH
 sys.path.append(root_dir)
+from src.models.plot_similarity_finder import plot_simil
+
 
 # WebApp title and subtitle
 st.title('Movie Recommendation.')
