@@ -1,11 +1,6 @@
 # Code for Streamlit webapp
 
 import streamlit as st
-
-import sys
-import os
-root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.append(root_dir)
 from src.models.plot_similarity_finder import plot_simil
 
 
