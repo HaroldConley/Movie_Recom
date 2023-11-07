@@ -2,7 +2,7 @@
 
 spacy~=3.7.1
 pandas~=2.1.1
-
+faiss-cpu~=1.7.4
 
 langchain~=0.0.311
 streamlit~=1.27.2
