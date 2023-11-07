@@ -9,7 +9,7 @@ from langchain.embeddings.sentence_transformer import SentenceTransformerEmbeddi
 embedding_function = SentenceTransformerEmbeddings(model_name="sentence-t5-large")
 
 # Loading vectorstore
-db = FAISS.load_local('../streamlit/plot_embeddings', embedding_function)
+db = FAISS.load_local('./streamlit/plot_embeddings', embedding_function)
 
 
 # Find the most similar plots to the user plot/input
